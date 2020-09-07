@@ -1,0 +1,28 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "App about movies",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangeorgiew/movies.git"
+  },
+  "author": "Ivan Georgiev <ivan_georgiew@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivangeorgiew/movies/issues"
+  },
+  "homepage": "https://github.com/ivangeorgiew/movies#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "tied-pants": "^4.8.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon ./config/server.js",
+    "prod": "NODE_ENV=production node ./config/server.js"
+  }
+}
