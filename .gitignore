@@ -1,3 +1,8 @@
+# Snowpack
+.build
+build
+web_modules
+
 # Logs
 logs
 *.log

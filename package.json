@@ -1,28 +1,49 @@
 {
-  "name": "movies",
-  "version": "1.0.0",
-  "description": "App about movies",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ivangeorgiew/movies.git"
-  },
-  "author": "Ivan Georgiev <ivan_georgiew@yahoo.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ivangeorgiew/movies/issues"
-  },
-  "homepage": "https://github.com/ivangeorgiew/movies#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "tied-pants": "^4.8.0"
-  },
-  "scripts": {
-    "dev": "NODE_ENV=development nodemon ./config/server.js",
-    "prod": "NODE_ENV=production node ./config/server.js"
-  }
+    "name": "movies",
+    "version": "1.0.0",
+    "description": "App about movies",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ivangeorgiew/movies.git"
+    },
+    "author": "Ivan Georgiev <ivan_georgiew@yahoo.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ivangeorgiew/movies/issues"
+    },
+    "homepage": "https://github.com/ivangeorgiew/movies#readme",
+    "scripts": {
+        "start": "snowpack dev",
+        "build": "snowpack build",
+        "dev": "NODE_ENV=development nodemon --watch public --watch config server.js",
+        "prod": "NODE_ENV=production node server.js",
+        "lint": "eslint --quiet --fix 'src/**/*.{js,jsx,ts,tsx}' && echo 'Lint complete'"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "tied-pants": "^4.8.0"
+    },
+    "devDependencies": {
+        "@snowpack/app-scripts-react": "^1.10.0",
+        "@types/react": "^16.9.35",
+        "@types/react-dom": "^16.9.8",
+        "@types/snowpack-env": "^2.3.0",
+        "@typescript-eslint/eslint-plugin": "^4.1.0",
+        "@typescript-eslint/parser": "^4.1.0",
+        "eslint": "^7.8.1",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.20.6",
+        "eslint-plugin-react-hooks": "^4.1.0",
+        "eslint-plugin-standard": "^4.0.1",
+        "nodemon": "^2.0.4",
+        "snowpack": "^2.10.2",
+        "typescript": "^3.9.7"
+    }
 }
