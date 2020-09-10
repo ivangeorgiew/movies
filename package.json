@@ -17,14 +17,15 @@
         "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'"
     },
     "dependencies": {
+        "core-js": "^3.6.5",
         "cors": "^2.8.5",
         "express": "^4.17.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "tied-pants": "^4.9.1"
+        "tied-pants": "^4.9.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.10.5",
+        "@babel/core": "^7.11.0",
         "@babel/plugin-syntax-import-meta": "^7.10.4",
         "@babel/preset-react": "^7.10.4",
         "@babel/preset-typescript": "^7.10.4",
