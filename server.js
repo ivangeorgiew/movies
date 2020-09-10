@@ -1,4 +1,4 @@
-import getErrorHandling from 'tied-pants'
+const getErrorHandling = require('tied-pants')
 
 const { createData, getHandledServer, FriendlyError } = getErrorHandling()
 const [http, path, express, cors] = createData('imports', [

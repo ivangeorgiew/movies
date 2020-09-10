@@ -2,16 +2,9 @@
     "name": "movies",
     "version": "1.0.0",
     "description": "App about movies",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ivangeorgiew/movies.git"
-    },
     "author": "Ivan Georgiev <ivan_georgiew@yahoo.com>",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/ivangeorgiew/movies/issues"
-    },
-    "homepage": "https://github.com/ivangeorgiew/movies#readme",
+    "browserslist": ">0.75%, not ie 11, not UCAndroid >0, not OperaMini all",
     "scripts": {
         "start": "snowpack dev",
         "build": "snowpack build",
@@ -24,10 +17,11 @@
         "express": "^4.17.1",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "tied-pants": "^4.8.0"
+        "tied-pants": "^4.9.0"
     },
     "devDependencies": {
         "@snowpack/app-scripts-react": "^1.10.0",
+        "@snowpack/plugin-webpack": "^2.0.9",
         "@types/react": "^16.9.35",
         "@types/react-dom": "^16.9.8",
         "@types/snowpack-env": "^2.3.0",
