@@ -3,9 +3,9 @@ import _React from 'react'
 import _ReactDOM from 'react-dom'
 
 interface NotifyProps {
-    isUncaught: boolean,
-    isFriendly: boolean,
-    userMsg: string,
+    isUncaught: boolean
+    isFriendly: boolean
+    userMsg: string
     productionMsg: string
 }
 
@@ -21,7 +21,6 @@ export const {
     createData,
     getHandledServer
 } = getErrorHandling({
-    isDevelopment: import.meta.env.NODE_ENV !== 'production',
     notify: (props: NotifyProps) => {
         const { isUncaught, isFriendly, userMsg } = props
 
@@ -33,7 +32,7 @@ export const {
     }
 })
 
-export const React = createData('React', _React)
+export const React = createData('React', _React, () => ({}))
 export const { useEffect, StrictMode } = React
-export const ReactDOM = createData('ReactDOM', _ReactDOM)
+export const ReactDOM = createData('ReactDOM', _ReactDOM, () => ({}))
 export const { render } = ReactDOM
