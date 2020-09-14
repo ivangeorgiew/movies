@@ -4,8 +4,16 @@ import cors from 'cors'
 import path from 'path'
 import getErrorHandling from 'tied-pants'
 
-const { createData, getHandledServer, FriendlyError } = getErrorHandling()
-const app = createData('Express application', express(), ({ error, args }) => {
+const {
+    catchUnhandled,
+    impureData,
+    getHandledServer,
+    FriendlyError
+} = getErrorHandling()
+
+catchUnhandled()
+
+const app = impureData('Express application', express(), ({ error, args }) => {
     const res = args[1]
 
     if (!res.headersSent) {
@@ -18,6 +26,7 @@ const app = createData('Express application', express(), ({ error, args }) => {
         })
     }
 })
+
 const server = getHandledServer(http.createServer(app))
 const port = process.env.PORT || 3000
 const publicPath = path.join(process.cwd(), '..', 'public')
@@ -37,5 +46,6 @@ app.get('/*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'))
 })
 
-server.listen(port)
-console.log(`Server running on port ${port}`)
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`)
+})
